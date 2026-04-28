@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<!-- 
+<!DOCTYPE html> tells the browser:
+"This is a modern HTML5 document."
+Always place this at the very top.
+-->
+
+<html lang="en">
+<!-- 
+<html> is the root element of the whole page.
+
+lang="en" means the main language of the page is English.
+This helps browsers, screen readers, and search engines.
+-->
+
+<head>
+  <!-- 
+  <head> contains technical information about the page.
+
+  Things inside <head> are usually NOT visible on the page itself.
+  -->
+
+  <meta charset="UTF-8">
+  <!-- 
+  This allows special characters like ä, ö, ü, ß and other symbols
+  to display correctly.
+  -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 
+  Important for responsive behavior.
+
+  It tells the browser:
+  "Use the real device width and normal zoom."
+  -->
+
+  <title>Maps | BFME II Archive</title>
+  <!-- 
+  This is the browser tab title.
+  -->
+</head>
+
+<body>
+  <!-- 
+  <body> contains everything the user can actually see on the page.
+  -->
+
+  <header>
+    <!-- 
+    <header> is the top area of the page.
+
+    Usually:
+    - page title
+    - navigation
+    -->
+
+    <h1>Maps</h1>
+
+    <nav aria-label="Main navigation">
+      <!-- 
+      <nav> is used for navigation links.
+      -->
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="maps.html">Maps</a></li>
+        <li><a href="other.html">Other</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="imprint.html">Imprint</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 
+    <main> contains the central content of the page.
+    -->
+
+    <section aria-labelledby="map-list-heading">
+
+      <h2 id="map-list-heading">Map List</h2>
+
+      <!-- ===================================================== -->
+      <!-- Example Map 1 -->
+      <!-- ===================================================== -->
+
+      <article>
+        <!-- 
+        <article> is used for one complete independent content block.
+
+        Here:
+        one single map entry.
+        -->
+
+        <h3>Harad Coast</h3>
+
+        <div>
+
+          <!-- Minimap -->
+
+          <section aria-label="Minimap">
+            <h4>Minimap</h4>
+
+            <img
+              src="data/images/minimaps/harad-coast.png"
+              alt="Minimap of Harad Coast"
+            >
+          </section>
+
+          <!-- Hard Facts -->
+
+          <section aria-label="Hard facts">
+            <h4>Hard Facts</h4>
+
+            <dl>
+              <!-- 
+              <dl> = description list
+
+              Perfect for:
+              label → value
+              -->
+
+              <dt>Player</dt>
+              <dd>8</dd>
+
+              <dt>Neutral Buildings</dt>
+              <dd>3x Inn, 2x Outpost, 2x Signal Fire</dd>
+
+              <dt>Creeps</dt>
+              <dd>3x Orcs, 4x Spiders, 2x Trolls, 2x Dragons</dd>
+
+              <dt>Size</dt>
+              <dd>400x400</dd>
+            </dl>
+          </section>
+
+          <!-- Description -->
+
+          <section aria-label="Description">
+            <h4>Description</h4>
+
+            <p>
+              The lands near Harad and below Mordor, Khand, are known for their
+              traders and for their stealthy assassins.
+            </p>
+
+            <dl>
+              <dt>Creator</dt>
+              <dd>Unknown</dd>
+
+              <dt>Year</dt>
+              <dd>Unknown</dd>
+            </dl>
+          </section>
+
+          <!-- Screenshots -->
+
+          <section aria-label="Screenshots">
+            <h4>Screenshots</h4>
+
+            <img
+              src="data/images/screenshots/harad-coast-1.png"
+              alt="Screenshot 1 of Harad Coast"
+            >
+
+            <img
+              src="data/images/screenshots/harad-coast-2.png"
+              alt="Screenshot 2 of Harad Coast"
+            >
+          </section>
+
+          <!-- Download -->
+
+          <section aria-label="Download">
+            <h4>Download</h4>
+
+            <a href="data/downloads/maps/harad-coast.zip">
+              Download ZIP
+            </a>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ===================================================== -->
+      <!-- Example Map 2 -->
+      <!-- ===================================================== -->
+
+      <article>
+
+        <h3>Helm's Deep</h3>
+
+        <div>
+
+          <section aria-label="Minimap">
+            <h4>Minimap</h4>
+
+            <img
+              src="data/images/minimaps/helms-deep.png"
+              alt="Minimap of Helm's Deep"
+            >
+          </section>
+
+          <section aria-label="Hard facts">
+            <h4>Hard Facts</h4>
+
+            <dl>
+              <dt>Player</dt>
+              <dd>8</dd>
+
+              <dt>Neutral Buildings</dt>
+              <dd>2x Inn, 2x Outpost, 1x Signal Fire</dd>
+
+              <dt>Creeps</dt>
+              <dd>2x Wargs, 2x Trolls</dd>
+
+              <dt>Size</dt>
+              <dd>500x500</dd>
+            </dl>
+          </section>
+
+          <section aria-label="Description">
+            <h4>Description</h4>
+
+            <p>
+              The legendary fortress of Rohan stands strong against invading armies.
+              Defensive play and large siege battles define this classic map.
+            </p>
+
+            <dl>
+              <dt>Creator</dt>
+              <dd>Unknown</dd>
+
+              <dt>Year</dt>
+              <dd>Unknown</dd>
+            </dl>
+          </section>
+
+          <section aria-label="Screenshots">
+            <h4>Screenshots</h4>
+
+            <img
+              src="data/images/screenshots/helms-deep-1.png"
+              alt="Screenshot 1 of Helm's Deep"
+            >
+
+            <img
+              src="data/images/screenshots/helms-deep-2.png"
+              alt="Screenshot 2 of Helm's Deep"
+            >
+          </section>
+
+          <section aria-label="Download">
+            <h4>Download</h4>
+
+            <a href="data/downloads/maps/helms-deep.zip">
+              Download ZIP
+            </a>
+          </section>
+
+        </div>
+      </article>
+
+      <!-- ===================================================== -->
+      <!-- Example Map 3 -->
+      <!-- ===================================================== -->
+
+      <article>
+
+        <h3>Fords of Isen</h3>
+
+        <div>
+
+          <section aria-label="Minimap">
+            <h4>Minimap</h4>
+
+            <img
+              src="data/images/minimaps/fords-of-isen.png"
+              alt="Minimap of Fords of Isen"
+            >
+          </section>
+
+          <section aria-label="Hard facts">
+            <h4>Hard Facts</h4>
+
+            <dl>
+              <dt>Player</dt>
+              <dd>2</dd>
+
+              <dt>Neutral Buildings</dt>
+              <dd>2x Inn, 1x Outpost</dd>
+
+              <dt>Creeps</dt>
+              <dd>4x Wargs, 2x Goblins</dd>
+
+              <dt>Size</dt>
+              <dd>300x300</dd>
+            </dl>
+          </section>
+
+          <section aria-label="Description">
+            <h4>Description</h4>
+
+            <p>
+              A competitive classic with two river crossings and strong early map
+              control battles. One of the best-known 1v1 maps in the game.
+            </p>
+
+            <dl>
+              <dt>Creator</dt>
+              <dd>Unknown</dd>
+
+              <dt>Year</dt>
+              <dd>Unknown</dd>
+            </dl>
+          </section>
+
+          <section aria-label="Screenshots">
+            <h4>Screenshots</h4>
+
+            <img
+              src="data/images/screenshots/fords-of-isen-1.png"
+              alt="Screenshot 1 of Fords of Isen"
+            >
+
+            <img
+              src="data/images/screenshots/fords-of-isen-2.png"
+              alt="Screenshot 2 of Fords of Isen"
+            >
+          </section>
+
+          <section aria-label="Download">
+            <h4>Download</h4>
+
+            <a href="data/downloads/maps/fords-of-isen.zip">
+              Download ZIP
+            </a>
+          </section>
+
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+</body>
+</html>
