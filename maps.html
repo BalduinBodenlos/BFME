@@ -1,67 +1,19 @@
 <!DOCTYPE html>
-<!-- 
-<!DOCTYPE html> tells the browser:
-"This is a modern HTML5 document."
-Always place this at the very top.
--->
+<!-- This document is the Maps page of the website. -->
 
 <html lang="en">
-<!-- 
-<html> is the root element of the whole page.
-
-lang="en" means the main language of the page is English.
-This helps browsers, screen readers, and search engines.
--->
-
 <head>
   <link rel="stylesheet" href="pages.css">
-  <!-- 
-  <head> contains technical information about the page.
-
-  Things inside <head> are usually NOT visible on the page itself.
-  -->
-
   <meta charset="UTF-8">
-  <!-- 
-  This allows special characters like ä, ö, ü, ß and other symbols
-  to display correctly.
-  -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 
-  Important for responsive behavior.
-
-  It tells the browser:
-  "Use the real device width and normal zoom."
-  -->
-
   <title>Maps | BFME II Archive</title>
-  <!-- 
-  This is the browser tab title.
-  -->
 </head>
 
 <body class="maps-page">
-  <!-- 
-  <body> contains everything the user can actually see on the page.
-  -->
-
   <header>
-    <!-- 
-    <header> is the top area of the page.
-
-    Usually:
-    - page title
-    - navigation
-    -->
-
     <h1>Maps</h1>
 
     <nav aria-label="Main navigation">
-      <!-- 
-      <nav> is used for navigation links.
-      -->
-
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="maps.html">Maps</a></li>
@@ -73,276 +25,255 @@ This helps browsers, screen readers, and search engines.
   </header>
 
   <main>
-    <!-- 
-    <main> contains the central content of the page.
-    -->
-
     <section aria-labelledby="map-list-heading">
-
       <h2 id="map-list-heading">Map List</h2>
 
-      <!-- ===================================================== -->
-      <!-- Example Map 1 -->
-      <!-- ===================================================== -->
-
-      <article>
-        <!-- 
-        <article> is used for one complete independent content block.
-
-        Here:
-        one single map entry.
-        -->
-
-        <h3>Harad Coast</h3>
-
-        <div>
-
-          <!-- Minimap -->
-
-          <section aria-label="Minimap">
-            <h4>Minimap</h4>
-
-            <img
-              src="data/images/minimaps/harad-coast.png"
-              alt="Minimap of Harad Coast"
-            >
-          </section>
-
-          <!-- Hard Facts -->
-
-          <section aria-label="Hard facts">
-            <h4>Hard Facts</h4>
-
-            <dl>
-              <!-- 
-              <dl> = description list
-
-              Perfect for:
-              label → value
-              -->
-
-              <dt>Player</dt>
-              <dd>8</dd>
-
-              <dt>Neutral Buildings</dt>
-              <dd>3x Inn, 2x Outpost, 2x Signal Fire</dd>
-
-              <dt>Creeps</dt>
-              <dd>3x Orcs, 4x Spiders, 2x Trolls, 2x Dragons</dd>
-
-              <dt>Size</dt>
-              <dd>400x400</dd>
-            </dl>
-          </section>
-
-          <!-- Description -->
-
-          <section aria-label="Description">
-            <h4>Description</h4>
-
-            <p>
-              The lands near Harad and below Mordor, Khand, are known for their
-              traders and for their stealthy assassins.
-            </p>
-
-            <dl>
-              <dt>Creator</dt>
-              <dd>Unknown</dd>
-
-              <dt>Year</dt>
-              <dd>Unknown</dd>
-            </dl>
-          </section>
-
-          <!-- Screenshots -->
-
-          <section aria-label="Screenshots">
-            <h4>Screenshots</h4>
-
-            <img
-              src="data/images/screenshots/harad-coast-1.png"
-              alt="Screenshot 1 of Harad Coast"
-            >
-
-            <img
-              src="data/images/screenshots/harad-coast-2.png"
-              alt="Screenshot 2 of Harad Coast"
-            >
-          </section>
-
-          <!-- Download -->
-
-          <section aria-label="Download">
-            <h4>Download</h4>
-
-            <a href="data/downloads/maps/harad-coast.zip">
-              Download ZIP
-            </a>
-          </section>
-
+      <section class="map-controls" aria-label="Map controls">
+        <div class="control-group">
+          <label for="map-search">Search</label>
+          <input
+            type="search"
+            id="map-search"
+            placeholder="Search maps, creeps, buildings..."
+          >
         </div>
-      </article>
 
-      <!-- ===================================================== -->
-      <!-- Example Map 2 -->
-      <!-- ===================================================== -->
-
-      <article>
-
-        <h3>Helm's Deep</h3>
-
-        <div>
-
-          <section aria-label="Minimap">
-            <h4>Minimap</h4>
-
-            <img
-              src="data/images/minimaps/helms-deep.png"
-              alt="Minimap of Helm's Deep"
-            >
-          </section>
-
-          <section aria-label="Hard facts">
-            <h4>Hard Facts</h4>
-
-            <dl>
-              <dt>Player</dt>
-              <dd>8</dd>
-
-              <dt>Neutral Buildings</dt>
-              <dd>2x Inn, 2x Outpost, 1x Signal Fire</dd>
-
-              <dt>Creeps</dt>
-              <dd>2x Wargs, 2x Trolls</dd>
-
-              <dt>Size</dt>
-              <dd>500x500</dd>
-            </dl>
-          </section>
-
-          <section aria-label="Description">
-            <h4>Description</h4>
-
-            <p>
-              The legendary fortress of Rohan stands strong against invading armies.
-              Defensive play and large siege battles define this classic map.
-            </p>
-
-            <dl>
-              <dt>Creator</dt>
-              <dd>Unknown</dd>
-
-              <dt>Year</dt>
-              <dd>Unknown</dd>
-            </dl>
-          </section>
-
-          <section aria-label="Screenshots">
-            <h4>Screenshots</h4>
-
-            <img
-              src="data/images/screenshots/helms-deep-1.png"
-              alt="Screenshot 1 of Helm's Deep"
-            >
-
-            <img
-              src="data/images/screenshots/helms-deep-2.png"
-              alt="Screenshot 2 of Helm's Deep"
-            >
-          </section>
-
-          <section aria-label="Download">
-            <h4>Download</h4>
-
-            <a href="data/downloads/maps/helms-deep.zip">
-              Download ZIP
-            </a>
-          </section>
-
+        <div class="control-group">
+          <label for="map-sort">Sort by</label>
+          <select id="map-sort">
+            <option value="players-asc">Players: low to high</option>
+            <option value="players-desc">Players: high to low</option>
+            <option value="name-asc">Name: A to Z</option>
+            <option value="name-desc">Name: Z to A</option>
+            <option value="year-asc">Year: old to new</option>
+            <option value="year-desc">Year: new to old</option>
+          </select>
         </div>
-      </article>
 
-      <!-- ===================================================== -->
-      <!-- Example Map 3 -->
-      <!-- ===================================================== -->
-
-      <article>
-
-        <h3>Fords of Isen</h3>
-
-        <div>
-
-          <section aria-label="Minimap">
-            <h4>Minimap</h4>
-
-            <img
-              src="data/images/minimaps/fords-of-isen.png"
-              alt="Minimap of Fords of Isen"
-            >
-          </section>
-
-          <section aria-label="Hard facts">
-            <h4>Hard Facts</h4>
-
-            <dl>
-              <dt>Player</dt>
-              <dd>2</dd>
-
-              <dt>Neutral Buildings</dt>
-              <dd>2x Inn, 1x Outpost</dd>
-
-              <dt>Creeps</dt>
-              <dd>4x Wargs, 2x Goblins</dd>
-
-              <dt>Size</dt>
-              <dd>300x300</dd>
-            </dl>
-          </section>
-
-          <section aria-label="Description">
-            <h4>Description</h4>
-
-            <p>
-              A competitive classic with two river crossings and strong early map
-              control battles. One of the best-known 1v1 maps in the game.
-            </p>
-
-            <dl>
-              <dt>Creator</dt>
-              <dd>Unknown</dd>
-
-              <dt>Year</dt>
-              <dd>Unknown</dd>
-            </dl>
-          </section>
-
-          <section aria-label="Screenshots">
-            <h4>Screenshots</h4>
-
-            <img
-              src="data/images/screenshots/fords-of-isen-1.png"
-              alt="Screenshot 1 of Fords of Isen"
-            >
-
-            <img
-              src="data/images/screenshots/fords-of-isen-2.png"
-              alt="Screenshot 2 of Fords of Isen"
-            >
-          </section>
-
-          <section aria-label="Download">
-            <h4>Download</h4>
-
-            <a href="data/downloads/maps/fords-of-isen.zip">
-              Download ZIP
-            </a>
-          </section>
-
+        <div class="control-group">
+          <label for="creep-filter">Creep filter</label>
+          <select id="creep-filter">
+            <option value="all">All creeps</option>
+            <option value="goblins">Goblins</option>
+            <option value="spiders">Spiders</option>
+            <option value="wargs">Wargs</option>
+            <option value="trolls">Trolls</option>
+            <option value="barrow wights">Barrow wights</option>
+            <option value="dragons">Dragons</option>
+          </select>
         </div>
-      </article>
 
+        <button type="button" id="reset-map-controls">Reset</button>
+      </section>
+
+      <p id="map-result-count" class="map-result-count" aria-live="polite"></p>
+
+      <div id="map-list">
+        <article
+          data-name="Rhun III"
+          data-players="8"
+          data-year="2011"
+          data-creeps="dragons trolls goblins wargs"
+        >
+          <h3>Rhun III</h3>
+
+          <div>
+            <section aria-label="Minimap">
+              <h4>Minimap</h4>
+              <img
+                src="data/images/minimaps/rhun-iii.png"
+                alt="Minimap of Rhun III"
+              >
+            </section>
+
+            <section aria-label="Hard facts">
+
+              <dl>
+                <dt>Player</dt>
+                <dd>8</dd>
+
+                <dt>Neutral Buildings</dt>
+                <dd>Inn, Outpost, Signalfire</dd>
+
+                <dt>Creeps</dt>
+                <dd>Dragons, Trolls, Goblins, Wargs</dd>
+
+                <dt>Size</dt>
+                <dd>500x500</dd>
+              </dl>
+            </section>
+
+            <section aria-label="Description">
+              <h4>Description</h4>
+              <p>
+                Unknown
+              </p>
+
+              <dl>
+                <dt>Creator</dt>
+                <dd>Baions</dd>
+
+                <dt>Year</dt>
+                <dd>2011</dd>
+              </dl>
+            </section>
+
+            <section aria-label="Screenshots">
+              <h4>Screenshots</h4>
+              <img
+                src="data/images/screenshots/rhun-iii-1.png"
+                alt="Screenshot 1 of Rhun III"
+              >
+              <img
+                src="data/images/screenshots/rhun-iii-2.png"
+                alt="Screenshot 2 of Rhun III"
+              >
+            </section>
+
+            <section aria-label="Download">
+              <h4>Download</h4>
+              <a href="data/downloads/maps/Rhun III.zip">Download ZIP</a>
+            </section>
+          </div>
+        </article>
+
+        <article
+          data-name="Mountains of Angmar"
+          data-players="6"
+          data-year="2020"
+          data-creeps="trolls spiders"
+        >
+          <h3>Mountains of Angmar</h3>
+
+          <div>
+            <section aria-label="Minimap">
+              <h4>Minimap</h4>
+              <img
+                src="data/images/minimaps/mountains-of-angmar.png"
+                alt="Minimap of Mountains of Angmar"
+              >
+            </section>
+
+            <section aria-label="Hard facts">
+              <dl>
+                <dt>Player</dt>
+                <dd>6</dd>
+
+                <dt>Neutral Buildings</dt>
+                <dd>Inn, Outpost</dd>
+
+                <dt>Creeps</dt>
+                <dd>Trolls, Spiders</dd>
+
+                <dt>Size</dt>
+                <dd>450x450</dd>
+              </dl>
+            </section>
+
+            <section aria-label="Description">
+              <h4>Description</h4>
+              <p>
+                Unknown
+              </p>
+
+              <dl>
+                <dt>Creator</dt>
+                <dd>AslakSkaldagrim</dd>
+
+                <dt>Year</dt>
+                <dd>2020</dd>
+              </dl>
+            </section>
+
+            <section aria-label="Screenshots">
+              <h4>Screenshots</h4>
+              <img
+                src="data/images/screenshots/mountains-of-angmar-1.png"
+                alt="Screenshot 1 of Mountains of Angmar"
+              >
+              <img
+                src="data/images/screenshots/mountains-of-angmar-2.png"
+                alt="Screenshot 2 of Mountains of Angmar"
+              >
+            </section>
+
+            <section aria-label="Download">
+              <h4>Download</h4>
+              <a href="data/downloads/maps/Mountains of Angmar_0001.zip">Download ZIP</a>
+            </section>
+          </div>
+        </article>
+
+        <article
+          data-name="Chetwood Hills"
+          data-players="4"
+          data-year="2010"
+          data-creeps="wargs goblins barrow wights"
+        >
+          <h3>Chetwood Hills</h3>
+
+          <div>
+            <section aria-label="Minimap">
+              <h4>Minimap</h4>
+              <img
+                src="data/images/minimaps/chetwood-hills.png"
+                alt="Minimap of Chetwood Hills"
+              >
+            </section>
+
+            <section aria-label="Hard facts">
+              <dl>
+                <dt>Player</dt>
+                <dd>4</dd>
+
+                <dt>Neutral Buildings</dt>
+                <dd>Inn, Signal Fire</dd>
+
+                <dt>Creeps</dt>
+                <dd>Wargs, Goblins, Barrow wights</dd>
+
+                <dt>Size</dt>
+                <dd>350x400</dd>
+              </dl>
+            </section>
+
+            <section aria-label="Description">
+              <h4>Description</h4>
+              <p>
+                Unknown
+              </p>
+
+              <dl>
+                <dt>Creator</dt>
+                <dd>Jokuc</dd>
+
+                <dt>Year</dt>
+                <dd>2010</dd>
+              </dl>
+            </section>
+
+            <section aria-label="Screenshots">
+              <h4>Screenshots</h4>
+              <img
+                src="data/images/screenshots/chetwood-hills-1.png"
+                alt="Screenshot 1 of Chetwood Hills"
+              >
+              <img
+                src="data/images/screenshots/chetwood-hills-2.png"
+                alt="Screenshot 2 of Chetwood Hills"
+              >
+            </section>
+
+            <section aria-label="Download">
+              <h4>Download</h4>
+              <a href="data/downloads/maps/Chetwood Hills.zip">Download ZIP</a>
+            </section>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
+  <script src="app.js"></script>
 </body>
 </html>

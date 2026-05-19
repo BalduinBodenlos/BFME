@@ -150,3 +150,64 @@ article > a:hover {
 body:not(.maps-page) article > div {
   display: block;
 }
+
+/* Map search, sort, and filter controls */
+.map-controls {
+  border: 2px solid #777;
+  background: #222;
+  padding: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: end;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-group label {
+  color: #f0d080;
+  font-weight: bold;
+}
+
+.control-group input,
+.control-group select {
+  min-width: 220px;
+  padding: 8px;
+  color: #ddd;
+  background: #111;
+  border: 1px solid #777;
+}
+
+.control-group input:focus,
+.control-group select:focus {
+  outline: 2px solid #f0d080;
+}
+
+#reset-map-controls {
+  padding: 8px 14px;
+  color: #111;
+  background: #f0d080;
+  border: 2px solid #fff0aa;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#reset-map-controls:hover {
+  background: #fff0aa;
+}
+
+.map-result-count {
+  margin: 0 0 16px 0;
+  color: #aaa;
+}
+
+section[aria-label="Minimap"] img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}

@@ -6,16 +6,31 @@
   <title>BFME II Archive</title>
   <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-  <main>
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="maps.html">Maps</a></li>
-        <li><a href="other.html">Other</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="imprint.html">Imprint</a></li>
-      </ul>
-    </nav>
-  </main>
+  <section id="portal-screen">
+    <div class="portal-image-area"></div>
+
+    <p class="portal-text">
+      Click <button id="friend-button" type="button">friend</button> and enter!
+    </p>
+  </section>
+
+  <section id="homepage-screen" class="hidden">
+    <main>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="maps.html">Maps</a></li>
+          <li><a href="other.html">Other</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="imprint.html">Imprint</a></li>
+        </ul>
+      </nav>
+    </main>
+  </section>
+
+  <audio id="menu-music" src="data/audio/menu-theme.mp3" loop></audio>
+
+  <script src="app.js"></script>
 </body>
 </html>
