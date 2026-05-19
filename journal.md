@@ -59,3 +59,55 @@ Created all CSS-Sheets and the Tutorial
 ## 2026-04-28
 
 Created JavaScript Concept
+
+## 2026-05-19
+
+Implemented the entrance portal for the homepage. The website now first shows a Doors of Durin themed portal screen before the actual homepage becomes visible.
+
+## 2026-05-19
+
+Added the interactive “friend” word to the portal sentence. Clicking it hides the portal and opens the actual homepage.
+
+## 2026-05-19
+
+Added homepage menu music. The music starts after the user clicks “friend”, because browsers usually block audio that starts without user interaction.
+
+## 2026-05-19
+
+Updated the homepage structure so that the portal screen and the actual RotWK-style homepage are both contained in `index.html`.
+
+## 2026-05-19
+
+Updated the homepage styling. The homepage now uses a separate background image and ice-blue menu buttons inspired by the Witch-king expansion.
+
+## 2026-05-19
+
+Decided to keep the first map implementation without `maps.json`. The map entries are written directly inside `maps.html`, and JavaScript works with the existing HTML articles.
+
+## 2026-05-19
+
+Added three real map entries to the Maps page: Rhun III, Mountains of Angmar, and Chetwood Hills.
+
+## 2026-05-19
+
+Added JavaScript controls to the Maps page: fulltext search, sorting dropdown, creep filter, reset button, and a result counter.
+
+## 2026-05-19
+
+Implemented fulltext search for map entries. The search checks visible map information such as name, player count, neutral buildings, creeps, size, description, creator, and year.
+
+## 2026-05-19
+
+Implemented sorting for maps by player count, map name, and year. Player sorting uses the map name as a secondary sorting rule.
+
+## 2026-05-19
+
+Implemented creep filtering for Goblins, Spiders, Wargs, Trolls, Barrow wights, and Dragons.
+
+## 2026-05-19
+
+Updated the map image handling plan. Original `.tga` minimap files remain source files, but browser-visible minimaps are converted to `.png`.
+
+## 2026-05-19
+
+Reviewed and commented the JavaScript code so it can be explained more clearly during the seminar presentation.
