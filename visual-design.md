@@ -68,14 +68,14 @@ Each map is displayed as a wide horizontal card.
 Each map card is arranged from left to right:
 
 1. Minimap
-2. Hard Facts
+2. Compact map data
 3. Description + Creator + Year
 4. Screenshots
 5. Download Area
 
-### Hard Facts Block
+### Compact Map Data
 
-The hard facts block contains compact structured information such as:
+The compact map data area contains structured information such as:
 
 - Player
 - Neutral Buildings

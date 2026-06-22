@@ -41,7 +41,9 @@ Optional later:
 
 Each map needs metadata for the website.
 
-These metadata are stored centrally in one `maps.json` file.
+The current implementation keeps this metadata directly inside the map entries in `maps.html`.
+
+As a possible future extension, the project may migrate to one central `maps.json` file so map metadata only has to be maintained once.
 
 ### Minimap Images
 

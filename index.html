@@ -3,21 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="A small BFME II and Rise of the Witch-king archive for custom maps and useful downloads."
+  >
   <title>BFME II Archive</title>
   <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-  <section id="portal-screen">
-    <div class="portal-image-area"></div>
+  <header class="visually-hidden">
+    <h1>BFME II Archive</h1>
+  </header>
 
-    <p class="portal-text">
-      Click <button id="friend-button" type="button">friend</button> and enter!
-    </p>
-  </section>
+  <main>
+    <section id="portal-screen" aria-labelledby="portal-heading">
+      <h2 id="portal-heading" class="visually-hidden">Entrance Portal</h2>
 
-  <section id="homepage-screen" class="hidden">
-    <main>
+      <img
+        class="portal-image"
+        src="data/images/portal-bg.jpg"
+        alt="The Doors of Durin should appear here; try to reload when the moonlight returns."
+      >
+
+      <p class="portal-text">
+        Click <button id="friend-button" type="button">friend</button> and enter!
+      </p>
+    </section>
+
+    <section id="homepage-screen" class="hidden" aria-labelledby="homepage-heading">
+      <h2 id="homepage-heading" class="visually-hidden">Main Menu</h2>
+
+      <p id="audio-message" class="audio-message" hidden>
+        Music could not be loaded or played.
+      </p>
+
       <nav aria-label="Main navigation">
         <ul>
           <li><a href="maps.html">Maps</a></li>
@@ -26,8 +46,8 @@
           <li><a href="imprint.html">Imprint</a></li>
         </ul>
       </nav>
-    </main>
-  </section>
+    </section>
+  </main>
 
   <audio id="menu-music" src="data/audio/menu-theme.mp3" loop></audio>
 

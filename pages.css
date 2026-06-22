@@ -7,8 +7,9 @@
 
 body {
   margin: 0;
-  padding: 24px;
+  padding: 12px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
   background: #111;
   color: #ddd;
 }
@@ -16,13 +17,25 @@ body {
 header {
   border: 2px solid #777;
   background: #222;
-  padding: 16px;
-  margin-bottom: 24px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+footer {
+  border: 2px solid #777;
+  background: #222;
+  padding: 12px;
+  margin-top: 16px;
+  color: #aaa;
+}
+
+footer p {
+  margin: 0;
 }
 
 h1 {
   margin: 0 0 12px 0;
-  font-size: 36px;
+  font-size: 30px;
   color: #f0d080;
 }
 
@@ -30,19 +43,19 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-nav li {
-  display: inline-block;
-  margin-right: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
 }
 
 nav a {
+  display: block;
   color: #f0d080;
   text-decoration: none;
   border: 1px solid #777;
   background: #111;
-  padding: 6px 12px;
+  padding: 8px 12px;
+  text-align: center;
 }
 
 nav a:hover {
@@ -58,38 +71,39 @@ h2 {
   color: #f0d080;
   border-bottom: 1px solid #777;
   padding-bottom: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
-/* Each map/tool entry */
 article {
   border: 2px solid #777;
   background: #1b1b1b;
-  margin-bottom: 24px;
-  padding: 14px;
+  margin-bottom: 18px;
+  padding: 12px;
 }
 
 article h3 {
   margin: 0 0 12px 0;
   color: #fff;
-  font-size: 26px;
+  font-size: 20px;
   border-bottom: 1px solid #555;
   padding-bottom: 6px;
+  overflow-wrap: anywhere;
 }
 
-/* This targets the inner div inside each map article */
 article > div {
   display: grid;
-  grid-template-columns: 180px 260px 1fr 260px 160px;
-  gap: 14px;
+  grid-template-columns: 1fr;
+  gap: 12px;
   align-items: start;
 }
 
-article section {
+article section,
+.map-info {
   border: 1px solid #555;
   background: #111;
   padding: 10px;
   min-height: 100%;
+  overflow-wrap: anywhere;
 }
 
 article h4 {
@@ -146,21 +160,17 @@ article > a:hover {
   background: #fff0aa;
 }
 
-/* Other/About/Imprint pages do not have the five-column map layout */
 body:not(.maps-page) article > div {
   display: block;
 }
 
-/* Map search, sort, and filter controls */
 .map-controls {
   border: 2px solid #777;
   background: #222;
-  padding: 14px;
+  padding: 12px;
   margin-bottom: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  align-items: end;
+  display: grid;
+  gap: 12px;
 }
 
 .control-group {
@@ -176,7 +186,7 @@ body:not(.maps-page) article > div {
 
 .control-group input,
 .control-group select {
-  min-width: 220px;
+  width: 100%;
   padding: 8px;
   color: #ddd;
   background: #111;
@@ -189,6 +199,7 @@ body:not(.maps-page) article > div {
 }
 
 #reset-map-controls {
+  width: 100%;
   padding: 8px 14px;
   color: #111;
   background: #f0d080;
@@ -210,4 +221,268 @@ section[aria-label="Minimap"] img {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+
+.maps-page article {
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.maps-page article > div {
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 8px;
+}
+
+.maps-page article section,
+.maps-page .map-info {
+  padding: 6px;
+  font-size: 13px;
+}
+
+.maps-page article h4 {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.maps-page section[aria-label="Minimap"] {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.maps-page section[aria-label="Minimap"] h4 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.maps-page section[aria-label="Minimap"] img {
+  margin-bottom: 0;
+}
+
+.maps-page .map-info {
+  grid-column: 2;
+}
+
+.maps-page .map-info dl {
+  display: block;
+}
+
+.maps-page section[aria-label="Description"] dl {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 6px;
+  row-gap: 3px;
+}
+
+.maps-page section[aria-label="Description"] dt {
+  margin: 0;
+}
+
+.maps-page section[aria-label="Description"] dd {
+  margin: 0;
+}
+
+.maps-page .map-info dt {
+  margin-top: 6px;
+}
+
+.maps-page .map-info dt:first-child {
+  margin-top: 0;
+}
+
+.maps-page .map-info dd {
+  margin: 0 0 4px 0;
+}
+
+.maps-page section[aria-label="Description"],
+.maps-page section[aria-label="Screenshots"],
+.maps-page section[aria-label="Download"] {
+  grid-column: 1 / -1;
+}
+
+.maps-page section[aria-label="Description"] p {
+  margin-bottom: 6px;
+}
+
+.maps-page section[aria-label="Screenshots"] {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.maps-page section[aria-label="Screenshots"] h4 {
+  grid-column: 1 / -1;
+}
+
+.maps-page section[aria-label="Screenshots"] img {
+  margin-bottom: 0;
+}
+
+@media (min-width: 700px) {
+  body {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  header {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  footer {
+    padding: 12px 16px;
+    margin-top: 24px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    grid-template-columns: none;
+  }
+
+  nav a {
+    padding: 6px 12px;
+    text-align: left;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  article {
+    margin-bottom: 24px;
+    padding: 14px;
+  }
+
+  article h3 {
+    font-size: 26px;
+  }
+
+  .maps-page article {
+    margin-bottom: 24px;
+    padding: 14px;
+  }
+
+  .maps-page article > div {
+    grid-template-columns: minmax(160px, 220px) 1fr;
+    gap: 14px;
+  }
+
+  .maps-page article section,
+  .maps-page .map-info {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .maps-page article h4 {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .maps-page section[aria-label="Minimap"] {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .maps-page section[aria-label="Minimap"] h4 {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0 0 8px 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    border: 0;
+  }
+
+  .maps-page section[aria-label="Minimap"] img {
+    margin-bottom: 8px;
+  }
+
+  .maps-page .map-info {
+    grid-column: auto;
+  }
+
+  .maps-page .map-info dl,
+  .maps-page section[aria-label="Description"] dl {
+    display: block;
+  }
+
+  .maps-page .map-info dt,
+  .maps-page section[aria-label="Description"] dt {
+    margin-top: 8px;
+  }
+
+  .maps-page .map-info dt:first-child,
+  .maps-page section[aria-label="Description"] dt:first-child {
+    margin-top: 0;
+  }
+
+  .maps-page .map-info dd,
+  .maps-page section[aria-label="Description"] dd {
+    margin: 0 0 8px 0;
+  }
+
+  .maps-page section[aria-label="Description"],
+  .maps-page section[aria-label="Screenshots"],
+  .maps-page section[aria-label="Download"] {
+    grid-column: auto;
+  }
+
+  .maps-page section[aria-label="Description"] p {
+    margin-bottom: 16px;
+  }
+
+  .maps-page section[aria-label="Screenshots"] {
+    display: block;
+  }
+
+  .maps-page section[aria-label="Screenshots"] img {
+    margin-bottom: 8px;
+  }
+
+  .map-controls {
+    padding: 14px;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    align-items: end;
+    gap: 14px;
+  }
+
+  #reset-map-controls {
+    width: auto;
+    justify-self: start;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 24px;
+  }
+
+  .maps-page article > div {
+    grid-template-columns: 180px 260px 1fr 260px 160px;
+  }
+
+  .map-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+  }
+
+  .control-group input,
+  .control-group select {
+    min-width: 220px;
+  }
 }

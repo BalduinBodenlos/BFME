@@ -69,7 +69,7 @@
 
 - Users can use an optional German version of the website.
 - Users can hear additional menu sound effects on the homepage.
-- The project may later migrate to a central `maps.json` system for easier scalability.
+- The project may later migrate to a central `maps.json` system, so map metadata only has to be maintained once and the map list can scale more easily.
 
 ## Open questions
 
