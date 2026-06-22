@@ -1,27 +1,42 @@
-# app-concept.md
+# JavaScript Concept
 
-## JavaScript Extension Concept
+## Purpose
 
-The JavaScript extension will add a keyword search to the `maps.html` page.
+The JavaScript adds the parts of the website that need to react to user input without loading a new page.
 
-The goal is to make the map archive easier to explore once more maps are added. Users should be able to search for any word that appears in the map information, not only the map name.
+It is used for two main areas: the entrance interaction on the homepage and the controls for the map archive.
 
-## What the application does
+## Homepage Interaction
 
-The application allows users to search the visible map list by keyword.
+The start page first shows a Doors of Durin entrance screen.
 
-The search should check all relevant text inside each map entry, including:
+When the user clicks the word "friend", JavaScript hides the entrance screen and shows the main homepage menu.
 
-- map name
-- player count
-- neutral buildings
-- creeps
-- size
-- description
-- creator
-- year
+The same interaction also starts the menu music. The music is connected to the user click so the browser can allow playback instead of blocking it as autoplay.
 
-For example, a user could search for:
+If the music cannot be loaded or played, JavaScript shows a visible message on the page.
+
+## Map Archive Controls
+
+The map archive uses JavaScript so users can change the visible map list directly on the page.
+
+The controls include:
+
+- fulltext search
+- sorting
+- creep filtering
+- reset button
+- visible result counter
+
+These controls work on the map entries that are already visible in the page content.
+
+## Search
+
+The search checks the visible text of each map entry.
+
+This means users can search not only for map names, but also for information such as player count, creeps, buildings, regions, creators, or years.
+
+Example searches include:
 
 - `dragon`
 - `inn`
@@ -29,68 +44,34 @@ For example, a user could search for:
 - `Harad`
 - `troll`
 
-The page should then only show map entries where the searched word appears somewhere in the map information.
+Only maps whose visible information matches the search stay visible.
 
-## How users interact with it
+## Sorting
 
-The `maps.html` page will include:
+The map list can be sorted by player count, map name, and year.
 
-- one search input field
-- one reset button
+Player sorting uses the map name as a secondary rule so maps with the same player count still appear in a stable alphabetical order.
 
-The interaction should be simple:
+Year sorting keeps maps with unknown years at the end instead of mixing them into the dated entries.
 
-1. The user types a word into the search field.
-2. The map list updates automatically.
-3. Maps that contain the search word remain visible.
-4. Maps that do not contain the search word are hidden.
-5. The user can press reset to clear the search and show all maps again.
+## Filtering
 
-## Where it fits into the website
+The creep filter lets users show maps that contain a selected creep type.
 
-The feature belongs on the `maps.html` page, above the map list.
+This makes it easier to find maps with specific gameplay elements such as dragons, trolls, spiders, goblins, wargs, or barrow wights.
 
-It supports the main purpose of the website: browsing and downloading custom maps.
+## Reset and Result Counter
 
-The JavaScript file will be named `app.js` and will be connected to `maps.html`.
+The reset button clears the current search, sorting, and creep filter state.
 
-## Planned technical approach
+The result counter updates after each change so users can see how many maps are currently visible.
 
-The implementation should use vanilla JavaScript only.
+## Why JavaScript Is Used
 
-The script will:
+JavaScript is useful here because the page content changes in response to user input.
 
-- select the search input
-- select the reset button
-- select all map entries
-- listen for user input in the search field
-- read the full visible text of each map entry
-- compare that text with the search term
-- hide entries that do not match
-- show entries that match
-- clear the search when the reset button is clicked
+Without JavaScript, users could still read the map list, but they could not search, sort, filter, or enter the homepage through the thematic "friend" interaction without loading separate pages or duplicating content.
 
-The code should stay small and understandable, around 40–80 lines.
+## Possible Future Improvement
 
-## Why this is a suitable extension
-
-This feature is useful for the actual project because players may search for specific map features such as dragons, inns, trolls, outposts, or specific regions.
-
-It is more meaningful than a simple button interaction, but still small enough to fully understand and explain.
-
-It gives a clear reason to use JavaScript: the visible map list changes dynamically without opening a new page.
-
-## Optional future extension: Website sound system
-
-A second possible JavaScript extension for later versions is a website sound system.
-
-This would include:
-
-- menu click sounds when users press navigation buttons
-- click sounds when users press download buttons
-- optional background menu music on the homepage
-- a small sound on/off button in the top-left corner
-
-This would help the website feel closer to the original RotWK main menu and improve the overall user experience.
-
-However, this is planned only as an optional extra feature later.
+A small future improvement could be to show short quotes from the game when users download a file.

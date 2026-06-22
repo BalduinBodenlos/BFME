@@ -112,23 +112,23 @@ Updated the map image handling plan. Original `.tga` minimap files remain source
 
 Reviewed and commented the JavaScript code so it can be explained more clearly during the seminar presentation.
 
-## 2026-06-21
+## 2026-06-14
 
 Removed the extensive explanatory comments from `app.js` to make the JavaScript code shorter and easier to read.
 
-## 2026-06-21
+## 2026-06-14
 
 Refactored the JavaScript structure. The file now uses one central `DOMContentLoaded` listener, with separate `initHomepage()` and `initMapControls()` functions for the homepage and maps page logic.
 
-## 2026-06-21
+## 2026-06-14
 
 Improved the JavaScript initialization order. Each feature now first checks whether the relevant page element exists before selecting the remaining elements for that feature.
 
-## 2026-06-21
+## 2026-06-14
 
 Cleaned up the audio error handling by replacing the empty `catch` block with a clear browser audio message.
 
-## 2026-06-21
+## 2026-06-14
 
 Simplified the year sorting logic by moving the shared behavior into one `compareYears()` helper function.
 
@@ -136,15 +136,15 @@ Simplified the year sorting logic by moving the shared behavior into one `compar
 
 Updated the documentation around future map data handling. A central `maps.json` file remains a possible later improvement, but the current implementation still keeps the map entries directly in `maps.html`.
 
-## 2026-06-22
+## 2026-06-21
 
 Reviewed the HTML structure for the project pages. Checked the use of semantic elements such as `header`, `nav`, `main`, `article`, `section`, and `footer`, and confirmed that each page has one main `h1` heading.
 
-## 2026-06-22
+## 2026-06-21
 
 Added meta descriptions to the HTML pages and validated the pages with the W3C Validator. Fixed invalid download links in `maps.html` by renaming ZIP files and removing spaces from the linked file paths.
 
-## 2026-06-22
+## 2026-06-21
 
 Improved the homepage portal image by changing it from a CSS background image to an HTML `img` element with descriptive alternative text.
 

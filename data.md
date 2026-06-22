@@ -6,9 +6,9 @@
 
 The main part of the project consists of custom maps for *The Battle for Middle-earth II* and *The Rise of the Witch-king*.
 
-Each map exists as its own folder.
+The original map files usually come as folders or archives containing the map file, minimap data, and possible extra files.
 
-Each folder contains at least:
+These files usually contain at least:
 
 - one `.map` file (the actual map)
 - one `.tga` file (the minimap preview image)
@@ -24,14 +24,10 @@ For website downloads, each map should be provided as a `.zip` file containing a
 
 The `Other` section contains files that are not maps.
 
-Currently planned:
+Including:
 
 - RotWK Trainer (`.rar` archive)
-
-Optional later:
-
-- Edain Mod 3.8.1 (only if redistribution is allowed by Modding Union)
-- other small tools or extras
+- external link to older Edain Mod versions
 
 ---
 
@@ -61,20 +57,13 @@ These are shown separately from the minimap inside each map entry.
 
 ### Homepage Assets
 
-The homepage needs additional assets for the RotWK-style start page:
+The homepage needs additional assets for the portal and RotWK-style start page:
 
-- fullscreen background image
+- Doors of Durin portal image
+- fullscreen homepage background image
 - menu sound file
 
 Optional later:
 
 - additional button graphics
 - decorative UI elements inspired by the original game menu
-
-### Text Content
-
-Additional written content is needed for:
-
-- About page
-- Imprint page
-- optional installation help or short instructions

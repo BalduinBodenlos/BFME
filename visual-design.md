@@ -4,13 +4,13 @@
 
 The homepage and the content pages follow two different visual ideas.
 
-The homepage should imitate the original *The Rise of the Witch-king* main menu and feel like opening the game itself.
+The homepage should imitate the atmosphere of *The Rise of the Witch-king* and feel close to opening the game itself.
 
-The other pages should look simple, oldschool, practical, and easy to read.
+The content pages should look simpler, oldschool, practical, and easy to read.
 
-The primary target format is desktop.
+The design principle is game feeling at the entrance, usability in the archive.
 
-Mobile compatibility is secondary. The pages should remain usable on smaller screens, but mobile design is not the main focus.
+The site should work on mobile, tablet, and desktop screens, while keeping the desktop homepage close to the original game-menu feeling.
 
 ---
 
@@ -18,22 +18,35 @@ Mobile compatibility is secondary. The pages should remain usable on smaller scr
 
 The homepage is the visual entry point of the website.
 
-It should imitate the structure and atmosphere of the original RotWK main menu.
+It combines a Doors of Durin entrance screen with a RotWK-style main menu.
 
-### Layout
+### Entrance Portal
+
+The entrance portal appears before the main menu.
+
+It uses:
+
+- a centered Doors of Durin image
+- a short entrance sentence
+- the word "friend" as the hidden-looking interaction
+- a dark fullscreen background
+
+### Main Menu Layout
+
+The main menu should imitate the structure and atmosphere of the original RotWK main menu.
+
+It uses:
 
 - fullscreen layout
 - fullscreen background image
-- no scrolling
-- no visible scrollbars
 - no long text sections
-- four navigation buttons at the bottom
+- four navigation buttons near the bottom
 
 The entire browser window should be filled by the homepage design.
 
 ### Navigation Buttons
 
-At the bottom of the page there are exactly four large buttons:
+The homepage has four large navigation buttons:
 
 - Maps
 - Other
@@ -48,7 +61,7 @@ The homepage design is based on a RotWK main menu screenshot.
 
 The following elements from the reference screenshot should not appear in the final website:
 
-- the white “The Rise of the Witch-king Patch 2.02” text
+- the white "The Rise of the Witch-king Patch 2.02" text
 - the YouTube watermark/logo
 
 ---
@@ -61,11 +74,17 @@ It should look simpler and more oldschool than the homepage.
 
 The page uses one long scrollable list of maps.
 
-Each map is displayed as a wide horizontal card.
-
 ### Map Card Layout
 
-Each map card is arranged from left to right:
+The map cards adapt to the available screen width.
+
+On small screens, each map is shown as a compact vertical card so the information remains readable without horizontal scrolling.
+
+On medium screens, the layout has more room for preview images and metadata, but still keeps the card compact.
+
+On desktop screens, each map is displayed as a wide horizontal card.
+
+The desktop layout is arranged from left to right:
 
 1. Minimap
 2. Compact map data
@@ -82,65 +101,22 @@ The compact map data area contains structured information such as:
 - Creeps
 - Size
 
-### Description Block
+### Description and Screenshots
 
-The description block contains the longer text information.
+The description block contains the longer text information and is placed near Creator and Year.
 
-The description is placed above Creator and Year.
-
-### Screenshots
-
-The screenshots are placed between the description block and the download area.
-
-They are shown separately from the minimap.
+Screenshots are shown separately from the minimap inside each map entry.
 
 ### Download Area
 
-The download area is placed on the far right.
-
-It contains a clearly visible ZIP download button.
+The download area contains a clearly visible ZIP download button.
 
 ---
 
-## Other Page (`other.html`)
+## Other, About, and Imprint Pages
 
-The Other page uses the same simple oldschool style as the Maps page.
+The Other, About, and Imprint pages use the same simple oldschool style as the Maps page.
 
-It contains downloads that are not maps.
+The Other page presents non-map downloads with a name, short description, file type, and download or external link.
 
-Each item should be presented clearly with:
-
-- name
-- short description
-- file type
-- download button
-
----
-
-## About Page (`about.html`)
-
-The About page uses the same simple oldschool style as the Maps page.
-
-It is mainly a readable text page.
-
-The layout should stay simple and not distract from the text.
-
----
-
-## Imprint Page (`imprint.html`)
-
-The Imprint page uses the same simple oldschool style as the Maps page.
-
-It should be plain, readable, and functional.
-
----
-
-## Open Design Questions
-
-Still undecided:
-
-- final color palette for the content pages
-- final fonts
-- final homepage background image
-- exact button styling
-- whether additional decorative UI elements should be used
+The About and Imprint pages are plain readable text pages and should not distract from their content.

@@ -1,79 +1,75 @@
-# requirements.md
+# Requirements
 
-## Must-have (actual requirements)
+## Homepage
 
-- Users can open a fullscreen start page (`index.html`).
-- The start page first shows an entrance portal before the actual homepage is visible.
-- The entrance portal shows an image of the Doors of Durin from Moria.
-- The entrance portal displays the sentence “Click friend and enter!”.
-- The word “friend” inside the sentence is clickable.
-- The word “friend” should not be visually highlighted as a button or link.
-- The word “friend” should visually blend into the sentence, so users have to understand the hint themselves.
-- When users click the word “friend”, the portal disappears and the actual homepage becomes visible.
-- When users click the word “friend”, the homepage music starts playing.
-- The homepage music loops after it has started.
-- The actual homepage uses a fullscreen RotWK-style background image.
-- Users can navigate from the homepage to:
-  - Maps
-  - Other
-  - About
-  - Imprint
-- Users can open a `maps.html` page that shows all available maps in one scrollable list.
-- The map list uses one continuous scrollable page and does not use separate detail pages for every map.
-- Users can see one entry per map.
-- The current implementation uses three manually written map entries directly inside `maps.html`.
-- The current implementation does not use a `maps.json` file.
-- Search, filtering, and sorting work directly on the existing HTML map entries.
-- Every map entry must include the following fields:
-  - Map name
-  - Minimap image
-  - Player count
-  - Neutral Buildings
-  - Creeps
-  - Size
-  - Description
-  - Creator
-  - Year
-  - Screenshots
-- If specific information is missing for a map, the field must still be shown and display a placeholder such as “Unknown” or “Not available”.
-- Users can download every map as a ZIP file.
-- Users can search maps with a fulltext search field.
-- The fulltext search checks the visible map information, including name, player count, neutral buildings, creeps, size, description, creator, and year.
-- Users can sort maps by:
-  - Players, low to high
-  - Players, high to low
-  - Name, A to Z
-  - Name, Z to A
-  - Year, old to new
-  - Year, new to old
-- Player sorting first sorts by player count and then alphabetically by map name.
-- Year sorting places maps with unknown years at the end.
-- Users can filter maps by creep type.
-- The creep filter supports:
-  - Goblins
-  - Spiders
-  - Wargs
-  - Trolls
-  - Barrow wights
-  - Dragons
-- Users can reset search, sorting, and creep filtering with a reset button.
-- Users can open an `other.html` page for downloads that are not maps.
-- The RotWK Trainer must be available on the `Other` page.
-- Edain Mod 3.8.1 may also be added to the `Other` page later if the Modding Union allows redistribution.
-- Users can open an `about.html` page with information about the project.
-- Users can open an `imprint.html` page.
-- The website should preferably work as a static website without backend and should ideally be hostable via GitHub Pages or another free static hosting service.
-- JavaScript should use vanilla JavaScript only.
+- Users should first see an entrance screen before the main menu is shown.
+- The entrance screen should use the Doors of Durin motif.
+- Users should be able to enter the homepage by clicking the word "friend" in the entrance sentence.
+- The clickable word should visually blend into the sentence.
+- After entering, users should see the main navigation.
+- Background music should start only after the user enters the homepage.
+- If the music cannot be played, users should see a clear message.
 
-## Nice-to-have (not actual requirements, but maybe potential ones in the future)
+## Navigation
 
-- Users can use an optional German version of the website.
-- Users can hear additional menu sound effects on the homepage.
-- The project may later migrate to a central `maps.json` system, so map metadata only has to be maintained once and the map list can scale more easily.
+- Users should be able to reach the Maps, Other, About, and Imprint pages from the homepage.
+- Users should be able to move between the main pages without returning to the browser history.
+- The current page structure should stay simple and understandable.
 
-## Open questions
+## Map Archive
 
-- Final styling of the entrance portal.
-- Final homepage background image.
-- Final fonts.
-- Whether additional decorative UI elements should be used.
+- Users should see all available maps in one continuous list.
+- Users should be able to compare maps by their visible information.
+- Users should be able to download every available map.
+- Users should be able to search the map list by visible text.
+- Users should be able to sort the map list by player count, map name, and year.
+- Users should be able to filter maps by creep type.
+- Users should be able to reset search, sorting, and filtering.
+- The number of visible map results should be clear after using the controls.
+
+## Map Information
+
+Each map entry should show the same basic information where possible:
+
+- map name
+- minimap preview
+- player count
+- neutral buildings
+- creeps
+- size
+- description
+- creator
+- year
+- screenshots
+- download option
+
+Missing map information should remain visible and be marked as unknown or unavailable.
+
+Unavailable or broken preview images should not leave users with an unexplained blank area.
+
+## Other Downloads
+
+- Non-map downloads should be separated from the map archive.
+- Users should be able to download the RotWK Trainer.
+- External resources should be clearly recognizable as external links.
+
+## About and Imprint
+
+- Users should be able to read what the project is about.
+- Users should be able to find basic contact and imprint information.
+- The project should make clear that it is a fan and education project.
+
+## Usability
+
+- Text should remain readable on desktop, tablet, and mobile screens.
+- Links and buttons should have understandable text.
+- Interactive controls should behave predictably.
+- Missing media or missing information should be communicated in visible text.
+- The website should be usable without an account, installation, or additional software.
+
+## Future Requirements
+
+- A German version could be added later.
+- More complete source notes could be added for individual maps.
+- Map data could be managed in a central data file if the archive grows larger.
+- Optional interface sound effects could be added if they do not make the site harder to use.
